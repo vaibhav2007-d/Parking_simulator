@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Parking - Vaibhav - iverilog</title>
+<style>
+body{margin:0;font-family:Arial;background:#eef2f7}
+.header{background:#0b3d91;color:#fff;padding:16px;text-align:center}
+.header p{font-size:11px;color:#90ff90;margin-top:5px}
+.grid{max-width:900px;margin:15px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;padding:0 15px}
+.slot{background:#fff;padding:15px;border-radius:12px;text-align:center;box-shadow:0 2px 6px #0001;border-top:6px solid #00c853}
+.slot.full{border-top-color:#d50000;background:#ffebee}
+.btn{padding:8px 14px;margin:4px;border-radius:20px;border:1px solid #0b3d91;background:#fff;color:#0b3d91;cursor:pointer;font-size:12px}
+.btn.in{background:#0b3d91;color:#fff}
+.btn.out{background:#ff6f00;color:#fff;border-color:#ff6f00}
+.summary{background:#fff;border:2px solid #0b3d91;max-width:900px;margin:15px auto;padding:15px;border-radius:12px}
+.footer{text-align:center;font-size:10px;color:#888;padding:20px}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h2>🅿️ SMART PARKING SYSTEM - iverilog Project</h2>
+<p>Riya Chavan 18008 | Vaibhav Repo | 2000H-2003H | iverilog parking.v -o sim</p>
+</div>
+
+<div class="grid">
+<div class="slot" id="s0">
+<h3>Slot 1<br><small>2000H</small></h3>
+<p id="t0">🟢 FREE - 00H</p>
+<button class="btn in" onclick="park(0,1)">Car Entry - MVI M,01H</button>
+<button class="btn out" onclick="park(0,0)">Car Exit - HLT</button>
+</div>
+
+<div class="slot" id="s1">
+<h3>Slot 2<br><small>2001H</small></h3>
+<p id="t1">🟢 FREE - 00H</p>
+<button class="btn in" onclick="park(1,1)">Car Entry</button>
+<button class="btn out" onclick="park(1,0)">Car Exit</button>
+</div>
+
+<div class="slot" id="s2">
+<h3>Slot 3<br><small>2002H</small></h3>
+<p id="t2">🟢 FREE - 00H</p>
+<button class="btn in" onclick="park(2,1)">Car Entry</button>
+<button class="btn out" onclick="park(2,0)">Car Exit</button>
+</div>
+
+<div class="slot" id="s3">
+<h3>Slot 4<br>
